@@ -51,7 +51,9 @@ export const Register = () => {
       })
       toast.success(`Successfully registered as ${payload.user.username}`)
       navigate('/', { replace: true })
-    } catch (e) {}
+    } catch (e) {
+      console.log(e.message)
+    }
   }
 
   if (state.auth) {
